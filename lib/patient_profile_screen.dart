@@ -86,18 +86,27 @@ class _PatientProfileScreenState extends State<PatientProfileScreen> {
             ),
             if (showAgePicker)
               SizedBox(
-                height: 120,
+                height: 200,
                 child: CupertinoPicker(
-                  itemExtent: 32,
+                  itemExtent: 40,
+                  magnification: 1.2,
+                  useMagnifier: true,
                   scrollController:
                       FixedExtentScrollController(initialItem: selectedAge - 1),
                   onSelectedItemChanged: (val) {
                     setState(() {
                       selectedAge = val + 1;
-                      showAgePicker = false;
                     });
                   },
-                  children: List.generate(99, (index) => Text("${index + 1}")),
+                  children: List.generate(
+                    99,
+                    (index) => Center(
+                      child: Text(
+                        "${index + 1} years",
+                        style: const TextStyle(fontSize: 18),
+                      ),
+                    ),
+                  ),
                 ),
               ),
             const SizedBox(height: 20),
