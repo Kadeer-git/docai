@@ -267,7 +267,7 @@ class _SymptomAnalyzerScreenState extends State<SymptomAnalyzerScreen>
                         borderRadius: BorderRadius.circular(10)),
                   ),
                   child:
-                      const Text("Reset", style: TextStyle(color: Colors.blue)),
+                      const Text("Reset", style: TextStyle(color: Colors.red)),
                 ),
               ],
             ),
